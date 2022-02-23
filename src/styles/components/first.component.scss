@@ -1,0 +1,69 @@
+#app-first {
+  background-image: url("/assets/banner_wf.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  & > .app-wrapper {
+    align-items: center;
+    height: 650px;
+    justify-content: flex-start;
+    padding: 0 60px;
+    & > .app-first__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      & > .app-first__info-header {
+        @include app-font__Nunito(
+          $app-color_000000-87,
+          40px,
+          normal,
+          400,
+          40px,
+          start
+        );
+        margin-bottom: 69px;
+        max-width: 670px;
+      }
+      & > .app-first__info-text {
+        @include app-font__Nunito(
+          $app-color_000000-87,
+          16px,
+          normal,
+          400,
+          26px,
+          start
+        );
+        margin-bottom: 40px;
+        max-width: 527px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 360px) {
+  #app-first {
+    & > .app-wrapper {
+      height: 380px;
+      padding: 0 16px;
+      & > .app-first__info {
+        & > .app-first__info-header {
+          @include app-font__Nunito(
+            $app-color_000000-87,
+            22px,
+            normal,
+            400,
+            28px,
+            start
+          );
+          margin-bottom: 45px;
+          max-width: 285px;
+        }
+        & > .app-first__info-text {
+          margin-bottom: 33px;
+          max-width: 241px;
+        }
+      }
+    }
+  }
+}

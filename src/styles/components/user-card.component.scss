@@ -1,0 +1,112 @@
+.app-user-card__list {
+  column-gap: 29px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 77px;
+  row-gap: 56px;
+
+  & > .app-user-card__list-item {
+    align-items: center;
+    background-color: $app-color_fafafa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 313px;
+    padding: 36px 30px 2px 30px;
+    width: 282px;
+
+    & > .app-user-card__list-item-avatar {
+      border-radius: 50%;
+      height: 70px;
+      margin-bottom: 15px;
+      width: 70px;
+    }
+
+    & > .app-user-card__list-item-info {
+      max-width: 222px;
+      width: 100%;
+      & > .app-user-card__list-item-info-container {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        & > .app-user-card__list-item-info-container-name {
+          @include app-font__Nunito(
+            $app-color_000000-87,
+            22px,
+            normal,
+            400,
+            28px,
+            center
+          );
+          @include app-text-overflow(2);
+          margin-bottom: 4px;
+        }
+
+        & > a {
+          @include app-font__Nunito(
+            $app-color_000000-87,
+            16px,
+            normal,
+            400,
+            26px,
+            center
+          );
+          text-decoration: none;
+
+          &.app-user-card__list-item-info-container-position {
+            @include app-text-overflow(3);
+          }
+
+          &.app-user-card__list-item-info-container-email {
+            @include app-text-overflow(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.app-user-card__button {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) and (min-width: 360px) {
+  .app-user-card__list {
+    margin-bottom: 40px;
+    row-gap: 20px;
+
+    & > .app-user-card__list-item {
+      height: 340px;
+      width: 328px;
+
+      & > .app-user-card__list-item-info {
+        max-width: 268px;
+
+        & > .app-user-card__list-item-info-container {
+          & > .app-user-card__list-item-info-container-name {
+            @include app-font__Nunito(
+              $app-color_000000-87,
+              22px,
+              normal,
+              400,
+              31px,
+              center
+            );
+          }
+
+          & > a {
+            color: $app-color_7e7e7e;
+
+            &.app-user-card__list-item-info-container-position {
+              @include app-text-overflow(2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

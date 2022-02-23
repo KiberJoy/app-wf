@@ -1,0 +1,134 @@
+#app-second {
+  & > .app-wrapper {
+    align-items: flex-start;
+    column-gap: 10px;
+    justify-content: space-between;
+    padding: 182px 60px 0 59px;
+
+    & > .app-second__scroll-down {
+      display: none;
+    }
+
+    & > .app-second__info {
+      max-width: 508px;
+      padding-top: 76px;
+
+      & > .app-second__info-header {
+        @include app-font__Nunito(
+          $app-color_000000-87,
+          40px,
+          normal,
+          400,
+          40px,
+          start
+        );
+        margin-bottom: 21px;
+      }
+
+      & > .app-second__info-subheader {
+        @include app-font__Nunito(
+          $app-color_000000-87,
+          22px,
+          normal,
+          400,
+          28px,
+          start
+        );
+        margin-bottom: 20px;
+      }
+
+      & > .app-second__info-text {
+        @include app-font__Nunito(
+          $app-color_000000-87,
+          16px,
+          normal,
+          400,
+          26px,
+          start
+        );
+        margin-bottom: 33px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 360px) {
+  #app-second {
+    & > .app-wrapper {
+      align-items: center;
+      column-gap: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px 16px 0 16px;
+
+      & > .app-second__scroll-down {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        row-gap: 6px;
+
+        & > .app-second__scroll-down-text {
+          @include app-font__Asap(
+            $app-color_7e7e7e,
+            12px,
+            normal,
+            400,
+            17px,
+            center
+          );
+        }
+
+        & > .app-second__scroll-down-image {
+          height: 37px;
+          width: 21px;
+        }
+      }
+
+      & > .app-second__info {
+        margin-bottom: 40px;
+        max-width: 328px;
+        padding-top: 0;
+        & > .app-second__info-header {
+          @include app-font__Nunito(
+            $app-color_000000-87,
+            22px,
+            normal,
+            400,
+            28px,
+            start
+          );
+          margin-bottom: 27px;
+        }
+        & > .app-second__info-subheader {
+          @include app-font__Nunito(
+            $app-color_000000-87,
+            22px,
+            normal,
+            400,
+            31px,
+            start
+          );
+          margin-bottom: 4px;
+        }
+        & > .app-second__info-text {
+          @include app-font__Nunito(
+            $app-color_000000-87,
+            16px,
+            normal,
+            400,
+            26px,
+            start
+          );
+          margin-bottom: 33px;
+        }
+      }
+      & > .app-second__image-wrapper {
+        & > .app-second__image-wrapper-item {
+          width: 328px;
+          height: 287px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+#app-third {
+  & > .app-wrapper {
+    align-items: center;
+    flex-direction: column;
+    padding: 195px 60px 0 60px;
+
+    & > .app-third__header {
+      @include app-font__Nunito(
+        $app-color_000000-87,
+        40px,
+        normal,
+        400,
+        40px,
+        center
+      );
+      margin-bottom: 23px;
+    }
+    & > .app-third__subheader {
+      @include app-font__Nunito(
+        $app-color_000000-87,
+        22px,
+        normal,
+        400,
+        28px,
+        center
+      );
+      margin-bottom: 41px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 360px) {
+  #app-third {
+    & > .app-wrapper {
+      padding: 107px 16px 0 16px;
+
+      & > .app-third__header {
+        @include app-font__Nunito(
+          $app-color_000000-87,
+          22px,
+          normal,
+          400,
+          28px,
+          center
+        );
+        margin-bottom: 16px;
+      }
+      & > .app-third__subheader {
+        @include app-font__Nunito(
+          $app-color_000000-87,
+          22px,
+          normal,
+          400,
+          31px,
+          center
+        );
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

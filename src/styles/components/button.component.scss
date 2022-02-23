@@ -1,0 +1,20 @@
+.app-button {
+  &__button {
+    @include app-font__Nunito(
+      $app-color_ffffff,
+      16px,
+      normal,
+      400,
+      26px,
+      center
+    );
+    background-color: $app-color_9f9f9f;
+    border-radius: 80px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 16px;
+    width: 148px;
+  }
+}
